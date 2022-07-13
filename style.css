@@ -95,10 +95,6 @@ a:active {
   margin-top: 34px;
 }
 
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-}
-
 .row.week-weather {
   text-align: center;
   font-size: smaller;
@@ -108,15 +104,16 @@ a:active {
 }
 .col-2 {
   margin: 0;
+  border-radius: 10px;
+  background-color: #faeefa;
+  border: 1px solid hsl(271, 36%, 82%);
+  box-shadow: 4px 6px 2px hsl(271, 36%, 82%);
 }
 .col-2:hover {
   color: #d59bf6;
   background-color: white;
   border-radius: 10px;
   border: 1px solid #f2f2f2;
-  padding: 0 10px 0 10px;
-  text-align: center;
-  font-size: larger;
 }
 
 .open-sourse-code-link {
@@ -124,7 +121,7 @@ a:active {
 }
 
 .body-app {
-  max-width: 496px;
+  max-width: 520px;
   max-height: 632px;
   padding: 0;
   margin: 30px auto;
