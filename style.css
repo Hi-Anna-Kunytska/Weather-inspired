@@ -44,14 +44,26 @@ img {
 
 .current-day-weather {
   text-align: center;
-  border-color: 2px solid black;
+  font-size: 1.2em;
+  font-weight: 1000;
   padding: 20px;
+}
+.current-day{
+ font-size: 1.4em; 
+}
+.current-temp {
+  font-size: 1.4em;
+}
+
+.description{
+   font-size: 1.4em;
 }
 
 .unit {
   font-size: 20px;
   padding-bottom: 30px;
 }
+
 a {
   outline: none;
   text-decoration: none;
@@ -111,7 +123,7 @@ a:active {
 }
 .col-2:hover {
   color: #d59bf6;
-  background-color: white;
+  background-color: #f9fafb;
   border-radius: 10px;
   border: 1px solid #f2f2f2;
 }
@@ -134,7 +146,11 @@ a:active {
 
   color: hwb(258deg 38% 38%);
   text-align: center;
-  box-shadow: 9px 9px 5px #f2f2f2;
   font-family: "Arima", cursive;
   flex-direction: column;
+  border: 1.5px solid #d3c1e2;
+  box-shadow: 8px 6px 2px hsl(271deg 36% 82% / 35%);
 }
+
+position: relative
+top: -34px
