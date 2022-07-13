@@ -1,10 +1,13 @@
-h2 {
-  letter-spacing: 5px;
+.city-name {
+  text-align: center;
+  padding: 20px 20px 0 20px;
+  font-size: 3em;
+  letter-spacing: 10px;
+  font-weight: 900;
+  color: white;
+  text-shadow: hsl(271, 36%, 82%) 2px 0px 2px, hsl(271, 36%, 82%) 0px 2px 2px,
+    hsl(271, 36%, 82%) 0px -2px 2px, hsl(271, 36%, 82%) -2px 0px 2px;
 }
-img {
-  width: 70px;
-}
-
 .search-holder {
   text-align: center;
   margin: 20px 0;
@@ -18,28 +21,10 @@ img {
 }
 
 .btn-light {
-  background-color: #faeefa;
-  border: 1px solid #f2f2f2;
+  background-color: #ffe3ff;
+  border: 1px solid hsl(271, 36%, 82%);
   box-shadow: 4px 6px 2px hsl(271, 36%, 82%);
-}
-
-.row.centered-block {
-  margin: 20px;
-}
-.icon {
-  text-align: center;
-  border-color: 2px solid black;
-  padding: 20px;
-}
-.city-name {
-  text-align: center;
-  padding: 20px 20px 0 20px;
-  font-size: 3em;
-  letter-spacing: 10px;
-  font-weight: 900;
-  color: white;
-  text-shadow: hsl(271, 36%, 82%) 2px 0px 2px, hsl(271, 36%, 82%) 0px 2px 2px,
-    hsl(271, 36%, 82%) 0px -2px 2px, hsl(271, 36%, 82%) -2px 0px 2px;
+  color: #73619e;
 }
 
 .current-day-weather {
@@ -48,15 +33,10 @@ img {
   font-weight: 1000;
   padding: 20px;
 }
-.current-day{
- font-size: 1.4em; 
-}
-.current-temp {
+.current-day,
+.current-temp,
+.description {
   font-size: 1.4em;
-}
-
-.description{
-   font-size: 1.4em;
 }
 
 .unit {
@@ -107,29 +87,34 @@ a:active {
   margin-top: 34px;
 }
 
-.row.week-weather {
-  text-align: center;
-  font-size: smaller;
-}
-.weather-img {
-  width: 30px;
-}
 .col-2 {
   margin: 0;
   border-radius: 10px;
-  background-color: #faeefa;
+  background-color: #ffe3ff;
   border: 1px solid hsl(271, 36%, 82%);
   box-shadow: 4px 6px 2px hsl(271, 36%, 82%);
+  padding: 5px;
+  color: white;
+  font-weight: 900;
+  font-size: medium;
+  text-shadow: hsl(271deg 100% 80%) 2px 0px 2px, hsl(271deg 36% 82%) 0px 2px 2px,
+    hsl(271deg 36% 82%) 0px -2px 2px, hsl(271deg 36% 82%) -2px 0px 2px;
 }
 .col-2:hover {
   color: #d59bf6;
   background-color: #f9fafb;
   border-radius: 10px;
   border: 1px solid #f2f2f2;
+  text-shadow: none;
+  cursor: pointer;
+}
+
+.icon-weather {
+  color: hsl(271deg 100% 80%);
 }
 
 .open-sourse-code-link {
-  margin-left: 55px;
+  text-align: center;
 }
 
 .body-app {
@@ -151,6 +136,3 @@ a:active {
   border: 1.5px solid #d3c1e2;
   box-shadow: 8px 6px 2px hsl(271deg 36% 82% / 35%);
 }
-
-position: relative
-top: -34px
