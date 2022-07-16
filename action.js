@@ -1,4 +1,3 @@
-////////Changing hour, month, date, day////////
 function formatDate() {
   let now = new Date();
   let hours = now.getHours();
@@ -27,8 +26,7 @@ function formatDate() {
   let month = months[now.getMonth()];
   return `${date} ${month} ${hours}:${minutes}`;
 }
-
-let currentDate = document.querySelector("#change-h-1");
+let currentDate = document.querySelector("#change-date-time");
 currentDate.innerHTML = formatDate();
 
 function changeDay() {
@@ -48,11 +46,9 @@ function changeDay() {
 let currentDay = document.querySelector("#current-day");
 currentDay.innerHTML = changeDay();
 
-//////////////Change city name and temp//////////////////
 function showWeather(response) {
-  console;
   let changeTemperature = document.querySelector("#current-temp");
-  let temperature = Math.round(response.data.main.temp);
+  let temperature = Math.round(celsiusTemperature);
   changeTemperature.innerHTML = temperature;
   let changeCity = document.querySelector(".city-name");
   changeCity.innerHTML = response.data.name;
@@ -61,7 +57,15 @@ function showWeather(response) {
   let changeWind = document.querySelector("#wind");
   changeWind.innerHTML = Math.round(response.data.wind.speed);
   let changeDescription = document.querySelector("#description");
-  changeDescription.innerHTML = response.data.weather[0].main;
+  changeDescription.innerHTML = response.data.weather[0].description;
+  celsiusTemperature = response.data.main.temp;
+
+  let currentImageWeather = document.querySelector("#icon");
+  currentImageWeather.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  currentImageWeather.setAttribute("alt", response.data.weather[0].description);
 }
 
 function showCity(city) {
@@ -76,10 +80,10 @@ function cityInput(event) {
   let city = document.querySelector("#search-input").value;
   showCity(city);
 }
+
 let cityForm = document.querySelector("#search-holder");
 cityForm.addEventListener("submit", cityInput);
 
-/////////Current geolocation btn//////////
 function showPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -94,5 +98,26 @@ function getPosition(event) {
 }
 let geoBtn = document.querySelector("#geo-btn");
 geoBtn.addEventListener("click", getPosition);
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let currentTemperature = document.querySelector("#current-temp");
+  currentTemperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let currentTemperature = document.querySelector("#current-temp");
+  currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 showCity("New York");

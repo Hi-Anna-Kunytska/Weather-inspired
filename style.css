@@ -27,6 +27,11 @@
   color: #73619e;
 }
 
+.first-weather-icon {
+  width: 50px;
+  color: #a077b8;
+}
+
 .current-day-weather {
   text-align: center;
   font-size: 1.2em;
@@ -39,9 +44,14 @@
   font-size: 1.4em;
 }
 
+.description {
+  text-transform: capitalize;
+}
+
 .unit {
   font-size: 20px;
-  padding-bottom: 30px;
+  position: relative;
+  top: -6px;
 }
 
 a {
@@ -52,14 +62,12 @@ a {
 a:link {
   color: #d59bf6;
 }
-a:visited {
-  color: #a077b8;
-}
 
 a:focus {
-  border-bottom: 1px solid;
-  background: white;
+  background-color: #ffe3ff;
+  color: hsl(271deg 100% 80%);
   border-radius: 5px;
+  box-shadow: 4px 6px 2px hsl(271, 36%, 82%);
 }
 
 a:hover {
@@ -84,7 +92,8 @@ a:active {
 
 .message-inspiration {
   color: #d59bf6;
-  margin-top: 34px;
+  margin-top: 62px;
+  font-size: 1.2em;
 }
 
 .col-2 {
