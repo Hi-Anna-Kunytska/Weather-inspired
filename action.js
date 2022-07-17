@@ -48,6 +48,7 @@ currentDay.innerHTML = changeDay();
 
 function showWeather(response) {
   let changeTemperature = document.querySelector("#current-temp");
+  celsiusTemperature = response.data.main.temp;
   let temperature = Math.round(celsiusTemperature);
   changeTemperature.innerHTML = temperature;
   let changeCity = document.querySelector(".city-name");
@@ -58,7 +59,6 @@ function showWeather(response) {
   changeWind.innerHTML = Math.round(response.data.wind.speed);
   let changeDescription = document.querySelector("#description");
   changeDescription.innerHTML = response.data.weather[0].description;
-  celsiusTemperature = response.data.main.temp;
 
   let currentImageWeather = document.querySelector("#icon");
   currentImageWeather.setAttribute(
