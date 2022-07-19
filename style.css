@@ -126,6 +126,12 @@ a:active {
   text-align: center;
 }
 
+.week-weather-forecast {
+}
+.weather-forecast-day {
+}
+.weather-forecast-temperature {
+}
 .body-app {
   max-width: 520px;
   max-height: 632px;
