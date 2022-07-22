@@ -51,9 +51,7 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log(response.data.daily);
   let forecast = response.data.daily;
-  let days = ["Thu", "Fri", "Sat", "Sun"];
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -68,10 +66,12 @@ function displayForecast(response) {
   alt=""
   width="25"
 />
-            <div class="weather-forecast-date">${formatDay(
-              forecastDay.dt
-            )}</div>
-            <div class="weather-forecast-temperature">28º 17º</div>
+            <div class="weather-forecast-date">
+            ${formatDay(forecastDay.dt)}</div>
+            <span class="weather-forecast-temperature max">
+            ${Math.round(forecastDay.temp.max)}º </span>
+            <span class="weather-forecast-temperature min">
+          ${Math.round(forecastDay.temp.min)}º</span>
           </div>
         `;
     }
