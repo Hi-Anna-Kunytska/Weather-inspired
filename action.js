@@ -27,6 +27,37 @@ function formatDate(timestamp) {
   return `${date} ${month} ${hours}:${minutes}`;
 }
 
+function formatSticker() {
+  let dailyMessage;
+  const currentDay = new Date().getDay();
+  switch (currentDay) {
+    case 0:
+      dailyMessage = `Today is the best day of your life!`;
+      break;
+    case 1:
+      dailyMessage = `A whole week of opportunities lies ahead. You will definitely succeed!
+`;
+      break;
+    case 2:
+      dailyMessage = `Today you will have a great day, full of inspiration and fun.`;
+      break;
+    case 3:
+      dailyMessage = `You're doing great, keep it up.`;
+      break;
+    case 4:
+      dailyMessage = `You can do anything, the main thing is to believe in yourself.`;
+      break;
+    case 5:
+      dailyMessage = `I'm proud of you!`;
+      break;
+    case 6:
+      dailyMessage = `You have everything you need to enjoy life here and now.`;
+      break;
+  }
+  document.querySelector("#message-inspiration").innerHTML = dailyMessage;
+}
+formatSticker();
+
 function changeDay() {
   let now = new Date();
   let days = [
@@ -61,11 +92,13 @@ function displayForecast(response) {
         forecastHTML +
         `
           <div class="col-2">
-            <img
-  src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
-  alt=""
-  width="25"
-/>
+          <div class="icon-weather">
+            <img 
+            src="./img/iconsWeather/${forecastDay.weather[0].icon}.svg";
+           alt=""
+           fill="#a077b8"
+        width="25"/> 
+        </div>
             <div class="weather-forecast-date">
             ${formatDay(forecastDay.dt)}</div>
             <span class="weather-forecast-temperature max">
@@ -109,7 +142,7 @@ function showWeather(response) {
   currentImageWeather.setAttribute("alt", response.data.weather[0].description);
   currentImageWeather.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `./img/iconsWeather/${response.data.weather[0].icon}.svg`
   );
 
   getForecast(response.data.coord);

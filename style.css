@@ -8,6 +8,12 @@
   text-shadow: hsl(271, 36%, 82%) 2px 0px 2px, hsl(271, 36%, 82%) 0px 2px 2px,
     hsl(271, 36%, 82%) 0px -2px 2px, hsl(271, 36%, 82%) -2px 0px 2px;
 }
+
+h3 {
+  color: #a077b8;
+  font-size: 2em;
+  font-weight: 900;
+}
 .search-holder {
   text-align: center;
   margin: 20px 0;
@@ -29,7 +35,7 @@
 
 .first-weather-icon {
   width: 50px;
-  color: #a077b8;
+  padding-bottom: 20px;
 }
 
 .current-day-weather {
@@ -37,11 +43,20 @@
   font-size: 1.2em;
   font-weight: 1000;
   padding: 20px;
+  letter-spacing: 0.06em;
 }
-.current-day,
-.current-temp,
+
 .description {
-  font-size: 1.4em;
+  font-size: 1em;
+}
+
+.current-temp {
+  font-size: 2em;
+}
+
+.current-day {
+  font-size: 1.7em;
+  padding-top: 7px;
 }
 
 .description {
@@ -60,7 +75,7 @@ a {
   padding: 2px 1px 0;
 }
 a:link {
-  color: #d59bf6;
+  color: #a077b8;
 }
 
 a:focus {
@@ -83,7 +98,7 @@ a:active {
 
 .inspiration-message {
   text-align: center;
-  background-color: #fcffff;
+  background-color: #fefbc7;
   padding: 16px;
   border-radius: 4px;
   margin-right: 32px;
@@ -91,8 +106,8 @@ a:active {
 }
 
 .message-inspiration {
-  color: #d59bf6;
-  margin-top: 62px;
+  color: #a077b8;
+  margin-top: 28px;
   font-size: 1.2em;
 }
 
@@ -103,23 +118,19 @@ a:active {
   border: 1px solid hsl(271, 36%, 82%);
   box-shadow: 4px 6px 2px hsl(271, 36%, 82%);
   padding: 5px;
-  color: white;
+  color: #a077b8;
   font-weight: 900;
   font-size: medium;
-  text-shadow: hsl(271deg 100% 80%) 2px 0px 2px, hsl(271deg 36% 82%) 0px 2px 2px,
-    hsl(271deg 36% 82%) 0px -2px 2px, hsl(271deg 36% 82%) -2px 0px 2px;
+  text-shadow: 1px -1px 2px hsl(61deg 65% 61% / 17%);
 }
+
 .col-2:hover {
-  color: #d59bf6;
+  color: #a077b8;
+  font-weight: 900;
   background-color: #f9fafb;
   border-radius: 10px;
   border: 1px solid #f2f2f2;
   text-shadow: none;
-  cursor: pointer;
-}
-
-.icon-weather {
-  color: hsl(271deg 100% 80%);
 }
 
 .open-sourse-code-link {
@@ -128,7 +139,7 @@ a:active {
 
 .body-app {
   max-width: 520px;
-  max-height: 632px;
+  max-height: 679px;
   padding: 0;
   margin: 30px auto;
   background: linear-gradient(
